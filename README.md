@@ -43,8 +43,9 @@ DELETE|`http://127.0.0.1:8000/agendas/<id_agenda>/`|deleta um agendamento
 
 ```json
     { 
+        "titulo": "Reunião de alinhamento", // titulo da reuniao
         "inicio": "2018-11-04T15:00:00Z", // inicio da reuniao
-        "final": "2018-11-01T18:00:00Z", // fim da reuniao
+        "fim": "2018-11-01T18:00:00Z", // fim da reuniao
         "qtd_pessoas": 5, // quantidade de pessoas que irao participar da reunião
         "sala": 1 // id da sala 
     }

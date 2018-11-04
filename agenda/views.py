@@ -11,7 +11,7 @@ from .models import Agenda
 
 class AgendaViewSet(viewsets.ModelViewSet):
 
-    __basic_fields = ('data_inicio', 'data_final', 'qtd_pessoas', 'sala')
+    __basic_fields = ('inicio', 'titulo', 'fim', 'qtd_pessoas', 'sala')
 
     authentication_classes = (SessionAuthentication, BasicAuthentication)
     permission_classes = (IsAuthenticated,)
