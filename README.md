@@ -24,11 +24,11 @@ GET|`http://127.0.0.1:8000/salas/`|lista as salas
 GET|`http://127.0.0.1:8000/salas/<id_sala>/`|Detalhe da sala
 PUT|`http://127.0.0.1:8000/salas/<id_sala>/`|atualiza uma sala
 DELETE|`http://127.0.0.1:8000/salas/<id_sala>/`|deleta uma sala
-POST|`http://127.0.0.1:8000/agenda/`|cria um novo agendamento
+POST|`http://127.0.0.1:8000/agendas/`|cria um novo agendamento
 GET|`http://127.0.0.1:8000/agendas/`|lista os agendamentos
-GET|`http://127.0.0.1:8000/agenda/<id_agenda>/`|Detalhe do agendamento
-PUT|`http://127.0.0.1:8000/agenda/<id_agenda>/`|atualiza um agendamento
-DELETE|`http://127.0.0.1:8000/agenda/<id_agenda>/`|deleta um agendamento
+GET|`http://127.0.0.1:8000/agendas/<id_agenda>/`|Detalhe do agendamento
+PUT|`http://127.0.0.1:8000/agendas/<id_agenda>/`|atualiza um agendamento
+DELETE|`http://127.0.0.1:8000/agendas/<id_agenda>/`|deleta um agendamento
 
 **Estrutura Sala**
 
