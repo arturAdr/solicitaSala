@@ -50,3 +50,8 @@ DELETE|`http://127.0.0.1:8000/agendas/<id_agenda>/`|deleta um agendamento
         "sala": 1 // id da sala 
     }
 ```
+
+##Como rodar
+
+## Postman
+No projeto existe um diretorio com o nome [Postman](https://www.getpostman.com/), nele contem uma collection com todas requisições montadas para facilitar o processo de teste.
