@@ -18,7 +18,7 @@ ENV PATH /opt/conda/bin:$PATH
 
 RUN apt-get update
 
-RUN apt-get -y install git
+RUN apt-get -qq update && apt-get -qq -y install git
 
 RUN mkdir /luizalabs/
 
@@ -31,7 +31,5 @@ WORKDIR /luizalabs/solicitaSala/
 RUN pip install --upgrade pip
 
 RUN pip install -r requirements.txt
-
-EXPOSE 8000
 
 ENTRYPOINT python manage.py runserver 0.0.0.0:8000
