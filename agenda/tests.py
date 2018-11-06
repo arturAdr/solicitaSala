@@ -44,10 +44,13 @@ class AgendaTestViewsPost(TestCase):
 
     def test_criacao(self):
 
+        inicio = dt.datetime.now() + dt.timedelta(days=1)
+        fim = inicio + dt.timedelta(hours=1)
+
         data = {
             'titulo': 'agenda test',
-            'inicio': '2018-01-01T00:00:00Z',
-            'fim': '2018-01-01T01:00:00Z',
+            'inicio': inicio.strftime('%Y-%m-%dT%H:%M:00Z'),
+            'fim': fim.strftime('%Y-%m-%dT%H:%M:00Z'),
             'qtd_pessoas': 5,
             'sala': self.sala.pk}
 

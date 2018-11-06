@@ -1,4 +1,5 @@
 from rest_framework import serializers
+import datetime as dt
 
 from .models import Agenda
 
@@ -10,6 +11,10 @@ class AgendaSerializer(serializers.ModelSerializer):
         fields = ('url', 'titulo', 'inicio', 'fim', 'qtd_pessoas', 'sala')
 
     def validate(self, data):
+
+        if data['inicio'].replace(tzinfo=None) < dt.datetime.now():
+            raise serializers.ValidationError(
+                "Inicio invalido, por favor informe um inicio valido")
 
         if data['qtd_pessoas'] > data['sala'].capacidade:
             raise serializers.ValidationError(
