@@ -2,10 +2,10 @@
 # API REST Agendamento
 
 ## Tecnologias
-Neste projeto foi usado as seguintes tecnologias
-Django framework
-Django REST Framework
-Linguagem de programação Python
+Neste projeto foi usado as seguintes tecnologias,
+Django framework,
+Django REST Framework,
+Linguagem de programação Python e
 Banco de dados Sqlite3.
 
 ## Sobre o Projeto
@@ -51,7 +51,21 @@ DELETE|`http://127.0.0.1:8000/agendas/<id_agenda>/`|deleta um agendamento
     }
 ```
 
-##Como rodar
+## Como rodar
 
-## Postman
-No projeto existe um diretorio com o nome [Postman](https://www.getpostman.com/), nele contem uma collection com todas requisições montadas para facilitar o processo de teste.
+Criei uma [docker](https://hub.docker.com/) e disponibilizei ela no [hub.docker.com](https://hub.docker.com/r/arturribeiro/solicitasala/)
+
+Então para rodar o projeto é só executar o comando:
+
+docker run -d -p 8000:8000 arturribeiro/solicitasala
+
+Para a execução dos teste unitários é preciso entrar na docker com o seguinte comando:
+
+docker exec -it id_da_docker bash 
+
+E logo em seguida dentro da docker:
+
+python manage.py test -v 2
+
+## Extra
+No projeto contém um diretório /[postman](https://www.getpostman.com/), nele contém uma collection com todas requisições montadas para facilitar o processo de teste.
